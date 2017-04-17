@@ -1,11 +1,13 @@
 # Design an A/B Test
+## 1 Experiment Design
+
 1. Experiment Design
 
 1.1 Metric Choice
 
 List which metrics you will use as invariant metrics and evaluation metrics here.
-Invariant metrics: Number of cookies, Number of clicks
-Evaluation metrics: Gross conversion, Retention, Net conversion
+-Invariant metrics: Number of cookies, Number of clicks
+-Evaluation metrics: Gross conversion, Retention, Net conversion
 For each metric, explain both why you did or did not use it as an invariant metric and why you did or did not use it as an evaluation metric. Also, state what results you will look for in your evaluation metrics in order to launch the experiment.
 Number of cookies (Number of unique users to visit the course overview page): Unit of Diversion is cookies, it's evenly distributed in control and experiment group. Also, the visits happen before the users see the experiment and thus independent from it.
 Number of clicks (Numer of unique cookies to click the start free trial button): As the click happen before the users see the experiement and independent from it. Explicitly speaking, the page asking the number of hours of the student devotion after clicking "Start free Trial" button, but the course overview page remains the same for both control & experiment group.
