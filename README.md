@@ -1,10 +1,11 @@
 # Design an A/B Test
+
 ## Experiment Design
 
 ### Metric Choice
 List which metrics you will use as invariant metrics and evaluation metrics here. (These should be the same metrics you chose in the "Choosing Invariant Metrics" and "Choosing Evaluation Metrics" quizzes.)
 
-Evalution metric defines the parameters thar are expected to chnage between the control and experimental group and the invariant metrics are used for sanity checking and they are not expected to change between the control and experimental group. 
+Evalution metric defines the parameters thar are expected to change between the control and experimental group and the invariant metrics are used for sanity checking and they are not expected to change between the control and experimental group. 
 
 - Invariant metrics: Number of Cookies, Number of clicks
 - Evaluation metrics: Gross conversion,Retention, Net Conversion
@@ -13,22 +14,36 @@ For each metric, explain both why you did or did not use it as an invariant metr
 
 ##### Number of Cookies
 
-Number of cookies are the number of unique cookies to view course overview page. For this the unit of diversion is cookies, the number of cookies to view the course overview page will not be affected by the change made on 'Start free trial' button.
+Number of cookies are the number of unique cookies to view course overview page. For this the unit of diversion is cookies, the number of cookies to view the course overview page will not be affected by the change made on 'Start free trial' button or after clicking the Start free trial, and can not be used as evaluation metric.
 
 ##### Number of clicks
 
-Number of clicks is the number of unique cookies to click the 'Start free trail' button.Since the quations 'how many hours you devote for the coures ? ' comes after clicking 'Start free trail ' button , the number of clicks will not be expectd to change on the experimental group and hence it is an invariant metrics.
+Number of clicks is the number of unique cookies to click the 'Start free trail' button.Since the quations 'how many hours you devote for the coures ? ' comes after clicking 'Start free trail ' button , the number of clicks will not be expectd to change on the experimental group and hence it is an invariant metrics and can not be used as evaluation metric.
 
-##### Gross conversion
+##### Gross conversion (GC)
 
-Gross conversion is the number of user-ids to complete the checkout and enroll in the free trial divided  by the number of  unique cookies to click the 'Start free trial ' button. In the experimental group, student will be enrolled after the question of how many hours should they devote per week,the number of enrolled user-id could be different from that of the control group and hence this metric is considered as an evaluation metric.
+Gross conversion is the number of user-ids to complete the checkout and enroll in the free trial divided  by the number of  unique cookies to click the 'Start free trial ' button. 
 
-##### Retention
-Retention is the number of user-ids to remain enrolled past the 14-days boundary (and thus make at least one payment) divided by the number of user-ids to complete checkout. Since the number of user-ids enrolled for the free trial in the experimental group could be affected by the pop-up webpage asking hours of devotion per week for the course, this metric would not be the same for both control and experimental groups , and therefore is an evaluation metric.
+             GC = (Number of user-ids enrolled in free trail)/(Number of unique cookies)
 
-##### Net Conversion
+In the experimental group, student will be enrolled after the question of how many hours should they devote per week,the number of enrolled user-id could be different from that of the control group and hence this metric is considered as an evaluation metric.
 
-Number of user-ids to remain enrolled past the 14-day boundary (and thus make at least one payment) divided by the number of unique cookies to click  the 'Start free trail'. Eventhough the number of cookies to click the 'Start free trial' is the same for both control and experimental groups, the number of user-ids that enrolled passed the 14 day free trail boundary could be still affected by the question posed in the experimental group, hence this metric can be considered as an evaluation metric.
+##### Retention (R)
+
+Retention is the number of user-ids to remain enrolled past the 14-days boundary (and thus make at least one payment) divided by the number of user-ids to complete checkout and enrolled in the free trail. 
+            
+            R = (Number of user_ids past 14-days)/(Number of users who enrolled in the free trial)
+
+Since the number of user-ids enrolled for the free trial in the experimental group could be affected by the pop-up webpage asking hours of devotion per week for the course, this metric would not be the same for both control and experimental groups , and therefore is an evaluation metric.
+
+##### Net Conversion (NC)
+
+Number of user-ids to remain enrolled past the 14-day boundary (and thus make at least one payment) divided by the number of unique cookies to click  the 'Start free trail'. 
+
+          NC = (Number of user-ids remain enrolled past 14 days)/(Number of uniue cookies to click the 'Start free trial')
+
+Eventhough the number of cookies to click the 'Start free trial' is the same for both control and experimental groups, the number of user-ids that enrolled passed the 14 day free trail boundary could be still affected by the question posed in the experimental group, hence this metric can be considered as an evaluation metric.
+
 
 
 ### Measuring Standard Deviation
