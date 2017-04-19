@@ -4,6 +4,20 @@
 ### Metric Choice
 List which metrics you will use as invariant metrics and evaluation metrics here. (These should be the same metrics you chose in the "Choosing Invariant Metrics" and "Choosing Evaluation Metrics" quizzes.)
 
+Evalution metric defines the parameters thar are expected to chnage between the control and experimental group and the invariant metrics are used for sanity checking and they are not expected to change between the control and experimental group. 
+
+- Invariant metrics: Number of Cookies, Number of clicks
+- Evaluation metrics: Gross conversion,Retention, Net Conversion
+##### Number of Cookies
+
+##### Number of clicks
+
+##### Gross conversion
+
+##### Retention
+
+##### Net Conversion
+
 For each metric, explain both why you did or did not use it as an invariant metric and why you did or did not use it as an evaluation metric. Also, state what results you will look for in your evaluation metrics in order to launch the experiment.
 
 ### Measuring Standard Deviation
@@ -41,3 +55,9 @@ Make a recommendation and briefly describe your reasoning.
 
 ## Follow-Up Experiment
 Give a high-level description of the follow up experiment you would run, what your hypothesis would be, what metrics you would want to measure, what your unit of diversion would be, and your reasoning for these choices.
+
+# Reference
+1. [https://vwo.com/ab-testing/](https://vwo.com/ab-testing/)
+2. [http://rajivgrover1984.blogspot.com/2015/11/ab-testing-overview.html](http://rajivgrover1984.blogspot.com/2015/11/ab-testing-overview.html)
+3. []()
+4.[]() 
