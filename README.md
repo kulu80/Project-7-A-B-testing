@@ -3,7 +3,7 @@
 ## Experiment Design
 
 ### Metric Choice
-*** List which metrics you will use as invariant metrics and evaluation metrics here. (These should be the same metrics you chose in the "Choosing Invariant Metrics" and "Choosing Evaluation Metrics" quizzes.)***
+<em> List which metrics you will use as invariant metrics and evaluation metrics here. (These should be the same metrics you chose in the "Choosing Invariant Metrics" and "Choosing Evaluation Metrics" quizzes.)</em>
 
 Evalution metric defines the parameters thar are expected to change between the control and experimental group and the invariant metrics are used for sanity checking and they are not expected to change between the control and experimental group. 
 
