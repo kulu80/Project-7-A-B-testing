@@ -10,7 +10,7 @@ Evalution metric defines the parameters thar are expected to change between the 
 - Invariant metrics: Number of Cookies, Number of clicks
 - Evaluation metrics: Gross conversion,Retention, Net Conversion
 
-<em><strong> For each metric, explain both why you did or did not use it as an invariant metric and why you did or did not use it as an evaluation metric. Also, state what results you will look for in your evaluation metrics in order to launch the experiment.
+<em><strong> For each metric, explain both why you did or did not use it as an invariant metric and why you did or did not use it as an evaluation metric. Also, state what results you will look for in your evaluation metrics in order to launch the experiment.</strong> </em>
 
 ##### Number of Cookies
 
