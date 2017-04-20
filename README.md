@@ -48,7 +48,16 @@ I will assess two evaluation meterics, the Gross Conversion and Net Convertion r
 
 ### Measuring Standard Deviation
 <em><strong> List the standard deviation of each of your evaluation metrics. (These should be the answers from the "Calculating standard deviation" quiz.)</strong> </em>
- 
+
+ I used the baseline values to analytically estimate the standard deviation (SD) of the 2 selected evaluation metrics (Gross conversion; Net conversion). Assuming a binomial distribution, SD = sqrt((p*(1-p)/N).
+
+Gross conversion: N=400; p=0.2063; SD=0.0202
+
+Net conversion: N=400; p=0.1093; SD=0.0156
+
+Number of userids: N=5000; p=0.0165; SD=0.0018
+
+A binomial distribution follows a normal distribution for large sample sizes. Both metrics (Gross- and Net conversion) depend on a number of unique cookies that click "start free trial" button, which is in line with our unit of diversion. This should lead to the assumption that the analytic estimate should be comparable to the empirical variability.
 
 <em><strong> For each of your evaluation metrics, indicate whether you think the analytic estimate would be comparable to the the empirical variability, or whether you expect them to be different (in which case it might be worth doing an empirical estimate if there is time). Briefly give your reasoning in each case.</strong> </em>
 
