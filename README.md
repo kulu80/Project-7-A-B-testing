@@ -44,10 +44,11 @@ Number of user-ids to remain enrolled past the 14-day boundary (and thus make at
 
 Eventhough the number of cookies to click the 'Start free trial' is the same for both control and experimental groups, the number of user-ids that enrolled passed the 14 day free trail boundary could be still affected by the question posed in the experimental group, hence this metric can be considered as an evaluation metric.
 
-Gross Conversion, will show us whether we lower our costs by introducing the new pop up. Net conversion will show how the change affects our revenues. After the experiment, we expect that, Gross conversion should have a practically significant decrease, and Net conversion should have a statistically significant increase
+I will assess two evaluation meterics, the Gross Conversion and Net Convertion rate to check if  the pop up website  about the number of hours spent per weeks would reduce students frastration and results increase in the number of student which pass the 14-day free trial boundary.
 
 ### Measuring Standard Deviation
 <em><strong> List the standard deviation of each of your evaluation metrics. (These should be the answers from the "Calculating standard deviation" quiz.)</strong> </em>
+ 
 
 <em><strong> For each of your evaluation metrics, indicate whether you think the analytic estimate would be comparable to the the empirical variability, or whether you expect them to be different (in which case it might be worth doing an empirical estimate if there is time). Briefly give your reasoning in each case.</strong> </em>
 
