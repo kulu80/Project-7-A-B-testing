@@ -49,21 +49,44 @@ I will assess two evaluation meterics, the Gross Conversion and Net Convertion r
 ### Measuring Standard Deviation
 <em><strong> List the standard deviation of each of your evaluation metrics. (These should be the answers from the "Calculating standard deviation" quiz.)</strong> </em>
 
- I used the baseline values to analytically estimate the standard deviation (SD) of the 2 selected evaluation metrics (Gross conversion; Net conversion). Assuming a binomial distribution, SD = sqrt((p*(1-p)/N).
+Based on the baseline values we can estimate Statandard deviation (SD) analytically for the two selected evaluation metrics, Gross conversion (GC) and Net Converison. Assuming a binomial distribution 
+   
+        SD = sqrt((p*(1-p)/N)
+        
+ For Gross Conersion
+        
+        N = 400, p = 0.2063 ,then SD = 0.0202
+For net conversion   
 
-Gross conversion: N=400; p=0.2063; SD=0.0202
-
-Net conversion: N=400; p=0.1093; SD=0.0156
-
-Number of userids: N=5000; p=0.0165; SD=0.0018
-
-A binomial distribution follows a normal distribution for large sample sizes. Both metrics (Gross- and Net conversion) depend on a number of unique cookies that click "start free trial" button, which is in line with our unit of diversion. This should lead to the assumption that the analytic estimate should be comparable to the empirical variability.
+       N = 400, p = 0.1093, SD = 0.0018
+   
 
 <em><strong> For each of your evaluation metrics, indicate whether you think the analytic estimate would be comparable to the the empirical variability, or whether you expect them to be different (in which case it might be worth doing an empirical estimate if there is time). Briefly give your reasoning in each case.</strong> </em>
+
+To compute  both  Gross convertion and Net conversion metrics unique cookies that click the 'Start free' button are used as unit of anlyisis, which is similar to the unit of diversion that is unique cookies. As a matter of fact the the analytical esimate and empirical esitmate of variablity should be closer to each other.  
 
 ### Sizing
 #### Number of Samples vs. Power
 <em><strong> Indicate whether you will use the Bonferroni correction during your analysis phase, and give the number of pageviews you will need to power you experiment appropriately. (These should be the answers from the "Calculating Number of Pageviews" quiz.)</strong> </em>
+
+I did not use Bonferronicorrection during my analysis phase. The metrics in the test has high correlation (covariant) and the Bonferroni correction will be too conservative to it.
+
+ I used he online Sample Size calculator (http://www.evanmiller.org/ab-testing/sample-size.html). The baseline conversion rate is calcualted for each metrics  and the minimum detectable effect (dmin) are show below.
+ 
+      Probability of enrolling given number of click (p): 20.625 % and dmin of 1 %
+      Sample Size = 25,835
+      
+      Probability of payment given number of  click (p): 10.93125 % and dmin 0.75 %
+      Sample Size = 27,413
+      
+Calculate the number of pageviews:Among 40000 page views only 3200 people click the 'Start free trail ' button, then the number of pageviews will be 
+                  
+     27,413 * 40000/3200 =  342,662.5
+The total number of pageview needed for the two groups , control and experimental group is 
+    
+     342,662.5*2 = 685,325
+ 
+Bonferroni correction will not be used as  both evaluation metrics have since Bonferroni correction is too conservative.
 
 #### Duration vs. Exposure
 <em><strong> Indicate what fraction of traffic you would divert to this experiment and, given this, how many days you would need to run the experiment. (These should be the answers from the "Choosing Duration and Exposure" quiz.)</strong> </em>
