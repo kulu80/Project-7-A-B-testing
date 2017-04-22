@@ -91,20 +91,98 @@ Bonferroni correction will not be used as  both evaluation metrics have since Bo
 #### Duration vs. Exposure
 <em><strong> Indicate what fraction of traffic you would divert to this experiment and, given this, how many days you would need to run the experiment. (These should be the answers from the "Choosing Duration and Exposure" quiz.)</strong> </em>
 
+Considering the daily traffic of 40000, I would direct 75% of my traffic (30000) to the experiment and the total number of page views required for both control and experimental group is 685,325, which  means it would take us approximately 685325/30000 = 22.844 days for the experiment.
+
 <em><strong> Give your reasoning for the fraction you chose to divert. How risky do you think this experiment would be for Udacity?</strong> </em>
+
+Directing 75% of traffic to the experimental group required less number of days to run and since the experiment only poses a question about number of hours committed per week, it doesn't change any of the contents of udacity, the experiment has modest or no risk. 
 
 ## Experiment Analysis
 ### Sanity Checks
 <em><strong> For each of your invariant metrics, give the 95% confidence interval for the value you expect to observe, the actual observed value, and whether the metric passes your sanity check. (These should be the answers from the "Sanity Checks" quiz.)</strong> </em>
+      
+      1. Number of cookies:
+         Total pageviews for control group: 345543
+         Total total pageviews for experimental group: 344660 
+         Total pageviews: 690203
+         Probability of cookie in control or experiment group: 0.5
+         SE = sqrt(0.5*(1-0.5)*(1/345543+1/344660) = 0.0006018
+         Margin of error (m) = SE * 1.96 = 0.0011796
+         Confidence Interval = [0.5-m,0.5+m] = [0.4988,0.5012]
+         Observed value  = 344660/690203 = 0.5006
+
+     2. Number of clicks: 
+        Total number of clicks for control group: 28378
+        Total number of clicks for experimental group: 28325
+        Total number of clicks: 56703
+        Probability of cookie in control or experiment group: 0.5
+        SE = sqrt(0.5*(1-0.5)*(1/28378+1/28325) = 0.0021
+        Margin of error (m) = SE * 1.96 = 0.0041
+        Confidence Interval = [0.5-m,0.5+m] = [0.4959,0.5041]
+        Observed value  = 28378/56703 = 0.50046
 
 <em><strong> For any sanity check that did not pass, explain your best guess as to what went wrong based on the day-by-day data. Do not proceed to the rest of the analysis unless all sanity checks pass.</strong> </em>
+
+As calccualted above the confidence interval for number of cookies is between 0.4988 and 0.5012 where as the observed value is 0.5006 which lies between the lower and upper boun of the confidence interval and the confidence interval for number of cookies is 0.4959 and 0.5041 where as the observed value is 0.50046 which also lies between lower and upper bound of the confidence interval. We can say that both invariant meterics pass the sanity check.
 
 ## Result Analysis
 ### Effect Size Tests
 <em><strong> For each of your evaluation metrics, give a 95% confidence interval around the difference between the experiment and control groups. Indicate whether each metric is statistically and practically significant. (These should be the answers from the "Effect Size Tests" quiz.)</strong> </em>
 
+For Gross conversion:
+    
+    Clicks for control = 17293 ,  Clicks for experiment = 17260
+    Enrollment for control = 3785, Enrollment for experiment = 3423
+Then
+  
+    Gross conversion for control = 3785/17293 = 0.2188746892
+    Gross Conversion for experiment = 3423/17260 = 0.1983198146
+  
+And for 95 % confidence interval the z-score = 1.96
+    
+    pooled probability = (0.2188746892+ 0.1983198146)/2  = 0.2085972519 
+    SE = SD = sqrt((p_pool*(1-p_pool)/(1/N_exp + 1/N_cont)) = 0.004371599645
+    dhat = 0.1983198146 - 0.2188746892 = -0.0205548746
+    Marigin of error , m = z*SE = 1.96*0.004371599645 = 0.008568335303
+    Confidence Interval : [-0.0291,-0.0120]
+    
+    
+For Net conversion:
+    
+    Clicks for control = 17293 ,  Clicks for experiment = 17260
+    Payment for control = 2033, Payment for experiment = 1945
+Then
+  
+    Net conversion for control = 2033/17293 = 0.1175620193
+    Net Conversion for experiment = 1945/17260 = 0.1126882966
+  
+And for 95 % confidence interval the z-score = 1.96
+    
+    pooled probability = (0.1175620193+ 0.1126882966)/2  = 0.115125158 
+    SE = SD = sqrt((p_pool*(1-p_pool)/(1/N_exp + 1/N_cont)) = 0.003434103318
+    dhat = 0.1126882966 - 0.1175620193 = -0.0049
+    Marigin of error , m = z*SE = 1.96*0.003434103318 = 0.0067
+    Confidence Interval : [-0.0116,-0.0018]
+    
+
 ### Sign Tests
 <em><strong> For each of your evaluation metrics, do a sign test using the day-by-day data, and report the p-value of the sign test and whether the result is statistically significant. (These should be the answers from the "Sign Tests" quiz.)</strong> </em>
+I used the online calculator (http://graphpad.com/quickcalcs/binomial1.cfm) to perform sign tests. 
+
+For Gross Conversion:
+   
+    Number of success: 4
+    Number of trials: 23
+    Probability: 0.5
+    Two-tailed p-value : 0.0026
+    
+For Net Conversion:
+  
+    Number of success: 10
+    Number of trials: 23
+    Probability: 0.5
+    Two-tailed p-value : 0.6776
+
 
 ## Summary
 <em><strong> State whether you used the Bonferroni correction, and explain why or why not. If there are any discrepancies between the effect size hypothesis tests and the sign tests, describe the discrepancy and why you think it arose.</strong> </em>
@@ -119,4 +197,4 @@ Bonferroni correction will not be used as  both evaluation metrics have since Bo
 1. [https://vwo.com/ab-testing/](https://vwo.com/ab-testing/)
 2. [http://rajivgrover1984.blogspot.com/2015/11/ab-testing-overview.html](http://rajivgrover1984.blogspot.com/2015/11/ab-testing-overview.html)
 3. [https://blog.kissmetrics.com/ab-testing-introduction/](https://blog.kissmetrics.com/ab-testing-introduction/)
-4.[]() 
+4. [http://larslofgren.com/growth/7-rules-for-ab-testing](http://larslofgren.com/growth/7-rules-for-ab-testing) 
