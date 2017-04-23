@@ -145,7 +145,9 @@ And for 95 % confidence interval the z-score = 1.96
     dhat = 0.1983198146 - 0.2188746892 = -0.0205548746
     Marigin of error , m = z*SE = 1.96*0.004371599645 = 0.008568335303
     Confidence Interval : [-0.0291,-0.0120]
-    
+
+With confidence interval between -0.0291 and -0.0120 that doen't contain zero, Gross conversion is statistically signicant and since the confidence interval doesn't contain dmin,it is practically significant.
+  
     
 For Net conversion:
     
@@ -162,9 +164,10 @@ And for 95 % confidence interval the z-score = 1.96
     SE = SD = sqrt((p_pool*(1-p_pool)/(1/N_exp + 1/N_cont)) = 0.003434103318
     dhat = 0.1126882966 - 0.1175620193 = -0.0049
     Marigin of error , m = z*SE = 1.96*0.003434103318 = 0.0067
-    Confidence Interval : [-0.0116,-0.0018]
-    
+    Confidence Interval : [-0.0116,0.0018]
 
+With confidence interval between -0.0116 and 0.0018 which doesn't contain zero , so Net conversion not statistically significant and since the confidence interval contain dmin is not also statistically significant. 
+    
 ### Sign Tests
 <em><strong> For each of your evaluation metrics, do a sign test using the day-by-day data, and report the p-value of the sign test and whether the result is statistically significant. (These should be the answers from the "Sign Tests" quiz.)</strong> </em>
 I used the online calculator (http://graphpad.com/quickcalcs/binomial1.cfm) to perform sign tests. 
@@ -182,13 +185,15 @@ For Net Conversion:
     Number of trials: 23
     Probability: 0.5
     Two-tailed p-value : 0.6776
-
+Gross Conversion with  p-value = 0.0026 is  statistical Significance 
+Net Conversion with  p-value = 0.6776 is not statistical Significance 
 
 ## Summary
 <em><strong> State whether you used the Bonferroni correction, and explain why or why not. If there are any discrepancies between the effect size hypothesis tests and the sign tests, describe the discrepancy and why you think it arose.</strong> </em>
-
+Since the two evaluation metrics uses the unit of analysis (number of unique cookies to click the course overview page that day), they are highly correlated, hence the Bebferroni mothod is more conservative for such correralted matrics, I didn' use it. 
 ## Recommendation
 <em><strong> Make a recommendation and briefly describe your reasoning.</strong> </em>
+As per the above analysis result, the growth conversion have showed a negative change which is practically siginificant. This tells us that the questions about number of house commited per week for udacity student would discourage students to continue and register for free trail. This could be viewed in two ways one is that the intervention in the experimental group could reduce the number of students who interupt after they started the course which could improve student coach engagment time  and then improves quality of project review. On the other hands as fewer students are registering and paying it could hurt udacity fanincially and in having less coaches and then increase project review time.  Results for net conversion reavel that the result is both statistically and preactically insignificant whcih could mean the udacity is better off with the old version and no need to have an intervention. So based on this reasons I wouldn't recommend udacity to launch the experiment. 
 
 ## Follow-Up Experiment
 <em><strong> Give a high-level description of the follow up experiment you would run, what your hypothesis would be, what metrics you would want to measure, what your unit of diversion would be, and your reasoning for these choices.</strong> </em>
