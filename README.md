@@ -101,7 +101,7 @@ Directing 75% of traffic to the experimental group required less number of days 
 ### Sanity Checks
 <em><strong> For each of your invariant metrics, give the 95% confidence interval for the value you expect to observe, the actual observed value, and whether the metric passes your sanity check. (These should be the answers from the "Sanity Checks" quiz.)</strong> </em>
       
-      1. Number of cookies:
+     Number of cookies:
          Total pageviews for control group: 345543
          Total total pageviews for experimental group: 344660 
          Total pageviews: 690203
@@ -111,7 +111,7 @@ Directing 75% of traffic to the experimental group required less number of days 
          Confidence Interval = [0.5-m,0.5+m] = [0.4988,0.5012]
          Observed value  = 344660/690203 = 0.5006
 
-     2. Number of clicks: 
+    Number of clicks: 
         Total number of clicks for control group: 28378
         Total number of clicks for experimental group: 28325
         Total number of clicks: 56703
@@ -197,6 +197,21 @@ As per the above analysis result, the growth conversion have showed a negative c
 
 ## Follow-Up Experiment
 <em><strong> Give a high-level description of the follow up experiment you would run, what your hypothesis would be, what metrics you would want to measure, what your unit of diversion would be, and your reasoning for these choices.</strong> </em>
+
+In my view Udacity is one of the best online platform available this time to train any one interseted in tech skill the most upto date topic from web developer to self-derivng cars. Eventhough most of the contents in udacity courses are developed are well presented and the instructors are also profficient, some contents  are harder to understand for bignners  and even for those who have some background in programming or data analytics. Like it is common in some bootcamp course, I would also suggest some preparion materials or mock tests that encompasses concepts across the nanodegree couses be provided before any one has enrolled to payed version of the  Nano-degree programm.
+
+
+Null Hypothesis:  Mock tests before enrolling to nano-degrees will not improve rention rate of udacity student
+
+Alternate Hypothesis: Mock tests before enrolling to nano-degree programm will improve udacity student retention
+
+Clips will be assigned to users randomly by dividing users into two groups: control and experiment groups. In control group, everything stays the same and no clip will be shown in the course overview page. In experiment group, users will see clips when they visit the course overview page.
+
+Unit of Diversion: Number of user-ids given after they pass the mock test to enroll to nano degree course is good unit of diversion.
+
+Evaluation Metric:Retention 
+Retention would be  a good evaluation metric because this provides us the ratio of the number of users who make first payments to the number of users who just completed the mock test and prepare for the course.
+
 
 # Reference
 1. [https://vwo.com/ab-testing/](https://vwo.com/ab-testing/)
